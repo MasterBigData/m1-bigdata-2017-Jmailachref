@@ -1,0 +1,40 @@
+Exercice 1:
+1-cela fonctionne parceque la méthode point appelle le constructeur par défaut 
+ qui n'as pas intêret a  utiliser les champs privés .
+2-les deux champs privés ne sont pas visible hors de leur classe 
+ Il faut une méthode get pour accéder aux champs.
+3-Il s'agit du principe d'encapsulation , les données ne seront lu qu'à  partir les 
+  méthodes de la classe.
+4-Un accesseur est une méthode définie dans la classe ou se trouve les champs
+  privés pour pouvoir les utiliser en dehors de leurs classe 
+5- Lorsque on définie un constructeur , celuit par défaut n'est plus valable
+ on doit alors définir un constructeur par défaut 
+6- Le compilateur ne fait plus déférence entre les attribus et les paramétres de la méthode 
+Il faut alors ajouter la méthode This pour mieux comprendre.
+ 7-On ajout un champ static de type "byte" qui est initialisé a 0 et à  chaque création
+ d'un Point il s'incrémente par 1.
+ 8-Le compilateur sait quel constructeur appeler par rapport les paramétes déja 
+  données.
+Exercice 2:
+1- Il affiche True 
+              False
+parce que la méthode "==" compare si les deux points pointent sur la méme case mémoires 
+   ou pas !! ce qui est le cas pour p1 et p2 , pas pour p3 et p1 méme si il onts les mémes 
+   caractéristiques.
+3- la bibliothéque de ArrayList doit étre appelé .
+    La méthode indéx of nous donne la premiére occurence de l'objet dans une liste 
+    s'il n'existe pas elle va nous donner -1 comme le cas de p3.
+Exercice3:
+2-Si on écrit pas de code supplémentaire le code va compiler mais érroner dés qu'on ajoute 
+   un nbre de point supérieur à la longuer max du Lignebrisée. Il faut alors ajouter une  
+   condition ou une exception dans la méthode add.
+3- Si il le nbre de point est egale au nbre max on aura False sinon true
+ et add(null) va vider une case de LigneBrisée.
+Exercice 4:
+5-System.out.println ne prends pas des objet en paramétre il faut utiliser Tostring
+
+
+  
+
+
+ 
