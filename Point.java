@@ -36,9 +36,12 @@ public Point (Point p) {
 	this(p.x,p.y);
 
 }
-public String ToString (Point p){
-	return (p.getX()+","+p.getY());
+
+public String ToString(){
+	
+	return (this.getX()+","+this.getY());
 }
+	
 public boolean isSameAs(Point p) {
 	if ((this.getX()==p.getX())&(this.getY()==p.getY())){
 		return true;
@@ -47,7 +50,15 @@ public boolean isSameAs(Point p) {
 }
 public void translate(float dx, float dy) {
 	
-	setX(x+dx);
-	setY(y+dy);
+	setX(getX()+dx);
+	setY(getY()+dy);
+}
+@Override 
+public boolean equals(Object p) {
+	if (p instanceof Point) {
+		Point o = (Point)p;
+		return (this.getX()==o.getX())&(this.getY()==(o.getY()));
+	}
+	return false;
 }
 }

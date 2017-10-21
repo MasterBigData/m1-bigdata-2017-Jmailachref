@@ -17,11 +17,21 @@ System.out.println(p1==p3);
 ArrayList<Point> List = new ArrayList<Point>();
 List.add(p1);
 System.out.println(List.indexOf(p3));
-System.out.println(List.indexOf(p2));
+System.out.println(List.indexOf(p1));
+
+LigneBrisee li1 = new LigneBrisee(3);
+
+
+li1.contains(p1);
+
+
 Cercle c1 =new Cercle(p1,2);
 Cercle c2 =new Cercle(p1,1);
-//c2.getCentre().translate(1,1);
-System.out.println(c1+" "+c2);
+//c2.translate(1,1);
+//System.out.println(c1+" "+c2);
+Ring r1 = new Ring(p1,3,1);
+System.out.println(r1);
+
 
 
 
