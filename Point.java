@@ -1,5 +1,5 @@
-package tn.dauphine.AshrefJemail.shapes;
-
+//package tn.dauphine.AshrefJemail.shapes;
+package Model;
 
 public class Point {
 private float x ;

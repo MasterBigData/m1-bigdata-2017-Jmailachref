@@ -1,5 +1,5 @@
-package tn.dauphine.AshrefJemail.shapes;
-
+//package tn.dauphine.AshrefJemail.shapes;
+package Model;
 public class Cercle extends Point{
 private Point centre;
 private float R;
