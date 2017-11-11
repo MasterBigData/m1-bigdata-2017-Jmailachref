@@ -1,25 +1,30 @@
-package View;
+package view;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.*;
-public class Mydisplay extends JPanel{
+
+import model.World;
+public class Mydisplay extends JPanel implements Observer{
 	
-	protected void paintComponent(Graphics g) {
-		g.drawLine(6, 60, 600, 6000);
+	public World w;
+	public Mydisplay() {
+		this.w=null;
 	}
-public static void main(String []args) {
-	JFrame frame =new JFrame("Java Avancé - Graphic Display");
-	//Construction d'un frame invisible avec un nom 
-	frame.setSize(new Dimension(500,500));
-	//Changer la dimension du frame
-	frame.setVisible(true);
-	// rendre le frame visible ( méthode hérité de l'interface accecible)
-	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	//assurer la ferméture ma défaut quand l'utilisateur ferme le frame.
-	Mydisplay d = new Mydisplay();
-	//creation d'un nouveau objet Mydisplay
-	frame.add(d);
+	public Mydisplay(World w) {
+		this.w=w;
+	}
+	public void draw(Graphics g) {}
+	protected void paintComponent(Graphics g) {for (int i=0;i<w.shapes.size();i++) {
+		w.shapes.get(i).ds.draw(g);
+	}}
+
+
+@Override
+public void update(Observable arg0, Object arg1) {
+	// TODO Auto-generated method stub
 	
 }
 }

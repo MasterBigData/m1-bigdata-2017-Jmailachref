@@ -1,15 +1,19 @@
-//package tn.dauphine.AshrefJemail.shapes;
-package Model;
+package model;
+import java.awt.Dimension;
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
+
+import view.Mydisplay;
 
 public class TestPoint 
 { 
 	
     public static void main( String[] args )
     {
-Point p1= new Point(1,2);
-Point p2=p1;
-Point p3=new Point(1,2);
+Point p1= new Point(1000,50);
+Point p2=new Point(300,300);
+/*Point p3=new Point(1,2);
 System.out.println(p1==p2);
 System.out.println(p1==p3);
 
@@ -23,17 +27,14 @@ LigneBrisee li1 = new LigneBrisee(3);
 
 
 li1.contains(p1);
+*/
 
-
-Cercle c1 =new Cercle(p1,2);
-Cercle c2 =new Cercle(p1,1);
-c2.translate(1,1);
-System.out.println(c1+" "+c2);
+Cercle c1 =new Cercle(p1,200);
+Cercle c2 =new Cercle(p2,100);
+//c2.translate(1,1);
+/*System.out.println(c1+" "+c2);
 Ring r1 = new Ring(p1,3,1);
-System.out.println(r1);
+System.out.println(r1);*/
+JFrame frame =new JFrame("Java Avancé - Graphic Display");
 
-
-
-
- 
-}}
+frame.setSize(new Dimension(500,500));}}

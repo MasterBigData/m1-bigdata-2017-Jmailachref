@@ -1,21 +1,25 @@
-//package tn.dauphine.AshrefJemail.shapes;
-package Model;
-public class Ring   {
-	private float petitR;
-	private float r;
-	private Point centre;
+
+package model;
+
+import view.DrawableRing;
+
+public class Ring extends Cercle   {
+	private int petitR;
 	
-	public Ring(Point C,float petRayon,float R) {
+	
+	
+	public Ring(Point C,int petRayon,int R) {
 	this.centre=C;
-	this.r=R;
+	this.R=R;
+	ds = new DrawableRing();
 	if (petRayon<R) {
 	petitR=petRayon;
 	}}
-	public float getPetitR() {
+	public int getPetitR() {
 		return petitR;
 	}
-	public float getR() {
-		return r;
+	public int getR() {
+		return R;
 	}
 	public Point getCentre() {
 		return centre;
@@ -28,7 +32,7 @@ public class Ring   {
 		}
 		return false;
 	}
-	public boolean contains(Point p) {
+	/*public boolean contains(Point p) {
 		Cercle c1= new Cercle(this.getCentre(),this.getPetitR());
 		Cercle c2=new Cercle(this.getCentre(),this.getR());
 		if ((c1.contains(p)==false) & (c2.contains(p)==true)) {
@@ -36,7 +40,7 @@ public class Ring   {
 			
 		}
 		return false;
-	}
+	}*/
 	public boolean contains(Point p, Ring ...rings ) {
 		for (Ring r: rings) {
 			if  (r.contains(p)) return true;
@@ -45,6 +49,3 @@ public class Ring   {
 	return false ;}
 	
 	}
-	
-
-

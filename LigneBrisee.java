@@ -1,5 +1,4 @@
-//package tn.dauphine.AshrefJemail.shapes;
-package Model;
+package model;
 import java.util.ArrayList;
 
 public class LigneBrisee  {

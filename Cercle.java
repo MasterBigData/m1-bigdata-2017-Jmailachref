@@ -1,20 +1,27 @@
-//package tn.dauphine.AshrefJemail.shapes;
-package Model;
-public class Cercle extends Point{
-private Point centre;
-private float R;
 
-public Cercle (Point p,float R) {
-	p.equals(centre);
-	this.R=R;
-}
+package model;
+
+import view.DrawableCercle;
+
+public class Cercle extends Shape{
+//private Point centre;
+protected int R;
+
+
 public Cercle() {
 	this(null,0);
+	ds = new DrawableCercle();
+}
+public Cercle (Point p,int R) {
+	super(p);
+	this.R=R;
+	
+	ds = new DrawableCercle( this);
 }
 public Point getCentre() {
 	return centre;
 }
-public float getRayon() {
+public int getRayon() {
 	return R;
 }
 public void setCentre(Point p) {
@@ -23,21 +30,21 @@ public void setCentre(Point p) {
 }
 
 
-public String ToString (){
+/*public String ToString (){
 	
 	return (this.getCentre().ToString()+","+this.getRayon()+","+this.surface());
 }
 @Override
-public void translate(float dx,float dy) {
+/*public void translate(int dx,int dy) {
    Point p = this.getCentre();
 	p.translate(dx,dy);
   	this.setCentre(p);
-}
-public double surface() {
+}*/
+/*public double surface() {
 	double s=getRayon()*getRayon()*3.14;
-	return s;
+	return s;*/
     
-}
+//}
 public boolean contains(Point p) {
 	if (Math.sqrt(Math.pow(p.getX()-this.centre.getX(),2)+Math.pow(p.getY()-this.centre.getY(), 2))==this.R) {
 		return true;
@@ -53,5 +60,3 @@ public boolean contains(Point p,Cercle... Cercles) {
 	
 	
 }
-
-

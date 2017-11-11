@@ -1,23 +1,24 @@
+
 //package tn.dauphine.AshrefJemail.shapes;
-package Model;
+package model;
 
 public class Point {
-private float x ;
-private float y;
+private int x ;
+private int y;
 public static int MaxPoint=0;
-public float getX() {
+public int getX() {
 	return x;
 }
-public float getY() {
+public int getY() {
 	return y	;
 }
-public void setX(float x) {
+public void setX(int x) {
 	this.x=x;
 	}
-public void setY(float y) {
+public void setY(int y) {
 	this.y=y;
 }
-public Point(float x,float y) {
+public Point(int x,int y) {
 	this.x=x;
 	this.y=y;
 	MaxPoint++;
@@ -48,7 +49,7 @@ public boolean isSameAs(Point p) {
 	}
 	else return false ;
 }
-public void translate(float dx, float dy) {
+public void translate(int dx, int dy) {
 	
 	setX(getX()+dx);
 	setY(getY()+dy);
