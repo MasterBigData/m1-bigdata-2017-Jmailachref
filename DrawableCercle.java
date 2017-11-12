@@ -1,7 +1,7 @@
 package view;
 
 import java.awt.Graphics;
-import java.awt.Shape;
+import model.Shape;
 
 import model.Cercle;
 
@@ -10,8 +10,7 @@ public class DrawableCercle extends DrawableShape {
 		s=null;
 	}
 	public DrawableCercle(Shape s) {
-	
-		super(s);
+	super(s);
 	}
 	
 public void draw(Graphics g) {

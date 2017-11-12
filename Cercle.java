@@ -2,7 +2,7 @@
 package model;
 
 import view.DrawableCercle;
-
+import view.DrawableShape;
 public class Cercle extends Shape{
 //private Point centre;
 protected int R;
@@ -30,21 +30,21 @@ public void setCentre(Point p) {
 }
 
 
-/*public String ToString (){
+public String ToString (){
 	
 	return (this.getCentre().ToString()+","+this.getRayon()+","+this.surface());
 }
-@Override
+
 /*public void translate(int dx,int dy) {
    Point p = this.getCentre();
 	p.translate(dx,dy);
   	this.setCentre(p);
 }*/
-/*public double surface() {
+public double surface() {
 	double s=getRayon()*getRayon()*3.14;
-	return s;*/
+	return s;
     
-//}
+}
 public boolean contains(Point p) {
 	if (Math.sqrt(Math.pow(p.getX()-this.centre.getX(),2)+Math.pow(p.getY()-this.centre.getY(), 2))==this.R) {
 		return true;

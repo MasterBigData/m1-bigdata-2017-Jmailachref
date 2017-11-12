@@ -2,8 +2,9 @@ package view;
 
 import java.awt.Graphics;
 
-import model.Cercle;
+
 import model.Ring;
+import model.Shape;
 
 public class DrawableRing extends DrawableCercle{
 public DrawableRing() {}
