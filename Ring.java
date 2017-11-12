@@ -3,6 +3,7 @@ package model;
 
 import view.DrawableRing;
 
+
 public class Ring extends Cercle   {
 	private int petitR;
 	
@@ -11,7 +12,7 @@ public class Ring extends Cercle   {
 	public Ring(Point C,int petRayon,int R) {
 	this.centre=C;
 	this.R=R;
-	ds = new DrawableRing();
+	ds = new DrawableRing(this);
 	if (petRayon<R) {
 	petitR=petRayon;
 	}}

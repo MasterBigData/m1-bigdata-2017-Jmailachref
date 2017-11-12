@@ -30,11 +30,25 @@ li1.contains(p1);
 */
 
 Cercle c1 =new Cercle(p1,200);
-Cercle c2 =new Cercle(p2,100);
+Cercle c2 =new Cercle(p2,150);
 //c2.translate(1,1);
-/*System.out.println(c1+" "+c2);
-Ring r1 = new Ring(p1,3,1);
-System.out.println(r1);*/
+//System.out.println(c1+" "+c2);
+Ring r1 = new Ring(p1,300,100);
+Ring r2 = new Ring(p2,300,200);
+//System.out.println(r1);
 JFrame frame =new JFrame("Java Avancé - Graphic Display");
+World w = new World();
+w.add(c1);
+w.add(c2);
+w.add(r1);
+w.add(r2);
+Mydisplay d=new Mydisplay(w);
 
-frame.setSize(new Dimension(500,500));}}
+w.addObserver(d);
+frame.add(d);
+frame.setVisible(true);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setSize(new Dimension(50000,50000));}
+    
+}
+
