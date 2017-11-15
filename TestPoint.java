@@ -1,9 +1,11 @@
 package model;
-import java.awt.Dimension;
+import java.awt.Component;
+import java.awt.Dimension; 
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
+import controller.MouseController;
 import view.Mydisplay;
 
 public class TestPoint 
@@ -48,7 +50,10 @@ w.addObserver(d);
 frame.add(d);
 frame.setVisible(true);
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-frame.setSize(new Dimension(50000,50000));}
+MouseController mcc=new MouseController(d);
+
+frame.setSize(new Dimension(50000,50000));
+    }
     
 }
 
