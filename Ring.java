@@ -10,8 +10,8 @@ public class Ring extends Cercle   {
 	
 	
 	public Ring(Point C,int petRayon,int R) {
-	this.centre=C;
-	this.R=R;
+	super(C,R);
+	petitR=0;
 	ds = new DrawableRing(this);
 	if (petRayon<R) {
 	petitR=petRayon;
@@ -33,7 +33,7 @@ public class Ring extends Cercle   {
 		}
 		return false;
 	}
-	/*public boolean contains(Point p) {
+public boolean contains(Point p) {
 		Cercle c1= new Cercle(this.getCentre(),this.getPetitR());
 		Cercle c2=new Cercle(this.getCentre(),this.getR());
 		if ((c1.contains(p)==false) & (c2.contains(p)==true)) {
@@ -41,12 +41,12 @@ public class Ring extends Cercle   {
 			
 		}
 		return false;
-	}*/
+	}
 	public boolean contains(Point p, Ring ...rings ) {
 		for (Ring r: rings) {
-			if  (r.contains(p)) return true;
+			if  (r.contains(p)==false) return false;
 			
 		}
-	return false ;}
+	return true ;}
 	
 	}

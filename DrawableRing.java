@@ -14,9 +14,9 @@ public DrawableRing(Shape s) {
 	super(s);
 }
 public void draw(Graphics g) {
-
-	g.drawOval(((Ring) s).getCentre().getX(), ((Ring) s).getCentre().getY(), ((Ring) s).getPetitR(),((Ring) s).getPetitR());
-	g.drawOval(((Ring) s).getCentre().getX(), ((Ring) s).getCentre().getY(), ((Ring) s).getRayon(),((Ring) s).getRayon());
+    super.draw(g);
+	g.drawOval(((Ring) s).getCentre().getX()-(((Ring) s).getPetitR()), ((Ring) s).getCentre().getY()-(((Ring) s).getPetitR()), ((Ring) s).getPetitR()*2,((Ring) s).getPetitR()*2);
+	//g.drawOval(((Ring) s).getCentre().getX(), ((Ring) s).getCentre().getY(), ((Ring) s).getRayon(),((Ring) s).getRayon());
 
 	}
 

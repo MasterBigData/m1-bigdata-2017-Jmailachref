@@ -15,7 +15,7 @@ public class DrawableCercle extends DrawableShape {
 	
 public void draw(Graphics g) {
 	
-	g.drawOval(((Cercle) s).getCentre().getX(), ((Cercle) s).getCentre().getY(), ((Cercle) s).getRayon(),((Cercle) s).getRayon());
+	g.drawOval(((Cercle) s).getCentre().getX()-((Cercle) s).getRayon(), ((Cercle) s).getCentre().getY()-((Cercle) s).getRayon(), ((Cercle) s).getRayon()*2,((Cercle) s).getRayon()*2);
 	//g.drawOval( s.getCentre().getX(), ((Cercle) s).getCentre().getY(), 5,5);}
 	
 }

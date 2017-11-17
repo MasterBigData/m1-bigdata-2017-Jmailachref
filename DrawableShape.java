@@ -1,9 +1,9 @@
 package view;
 
-import java.awt.Graphics;
+import java.awt.Graphics; 
 import model.Shape;
 
-public class DrawableShape extends Mydisplay{
+public class DrawableShape{
 	protected Shape s;
 	public DrawableShape() {
 		s=null;

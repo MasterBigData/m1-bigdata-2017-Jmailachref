@@ -4,7 +4,7 @@ package model;
 import view.DrawableCercle;
 import view.DrawableShape;
 public class Cercle extends Shape{
-//private Point centre;
+
 protected int R;
 
 
@@ -35,11 +35,11 @@ public String ToString (){
 	return (this.getCentre().ToString()+","+this.getRayon()+","+this.surface());
 }
 
-/*public void translate(int dx,int dy) {
+public void translate(int dx,int dy) {
    Point p = this.getCentre();
 	p.translate(dx,dy);
   	this.setCentre(p);
-}*/
+}
 public double surface() {
 	double s=getRayon()*getRayon()*3.14;
 	return s;
