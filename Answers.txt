@@ -1,0 +1,13 @@
+Exo1:
+
+3: On doit implémenter l'interface Iterable pour Utiliser la boucle for each
+4: La classe AbstractList fournit une squelette qui permet de minimiser 
+       l'effort requis pour la manipulation de la collection par exemple en 
+       simplifiant la recherche ou l'ajout.
+   Les méthodes abstraites qui doivent étre implémentées sont :
+       - get(int index) qui prend un index en paramétre et retourne la valeur
+              de la liste à cet index sachant qu'on part de 0.
+       - size() qui ne prend rien en paramétre et retourne la longueur de notre
+              liste 
+Exo2:
+3: La méthode mult() ne peut pas prendre une LinkedList en paramétre
